@@ -1,13 +1,13 @@
-import Header from "../../layouts/Home/header.tsx";
-import Footer from "../../layouts/Home/footer.tsx";
+import Header from "../../layouts/Home/header";
+import Footer from "../../layouts/Home/footer";
 
-import Hero from "../Home/sections/Hero.tsx";
-import Problem from "../Home/sections/Problem.tsx";
-import Solution from "../Home/sections/Solution.tsx";
-import Benefits from "../Home/sections/Benefits.tsx";
-import CTA from "../Home/sections/CTA.tsx";
+import Hero from "../Home/sections/Hero";
+import Problem from "../Home/sections/Problem";
+import Solution from "../Home/sections/Solution";
+import Benefits from "../Home/sections/Benefits";
+import CTA from "../Home/sections/CTA";
 
-import { ScrollReveal } from "../../components/Reveal.tsx";
+import { ScrollReveal } from "../../components/Reveal";
 
 export default function HomePage() {
   return (

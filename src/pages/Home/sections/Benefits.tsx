@@ -1,4 +1,20 @@
-import { Link, Check } from "lucide-react";
+import { Link as LinkIcon, Check } from "lucide-react";
+
+type BenefitItem = {
+  title: string;
+  description: string;
+  points: string[];
+};
+
+const benefit: BenefitItem = {
+  title: 'Histórico unificado: Chega de "pode repetir, por favor"',
+  description:
+    "Toda a jornada do cliente em uma única linha do tempo. Sua equipe sabe exatamente o que foi conversado antes, independentemente do canal ou do atendente anterior.",
+  points: [
+    "Continuidade no atendimento",
+    "Menor tempo de resolução",
+  ],
+};
 
 export default function Benefits() {
   return (
@@ -13,36 +29,35 @@ export default function Benefits() {
             O que acontece quando sua equipe tem as ferramentas certas.
           </p>
         </div>
+
         <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
           <div className="flex-1">
             <div className="inline-block p-3 bg-blue-100 text-blue-600 rounded-2xl mb-6">
               <div className="text-2xl">
-                <Link />
+                <LinkIcon />
               </div>
             </div>
+
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Histórico unificado: Chega de "pode repetir, por favor"
+              {benefit.title}
             </h3>
+
             <p className="text-gray-700 text-lg leading-relaxed">
-              Toda a jornada do cliente em uma única linha do tempo. Sua equipe
-              sabe exatamente o que foi conversado antes, independentemente do
-              canal ou do atendente anterior.
+              {benefit.description}
             </p>
+
             <ul className="mt-6 space-y-3">
-              <li className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">
-                  <Check />
-                </span>
-                Continuidade no atendimento
-              </li>
-              <li className="flex items-center text-gray-700">
-                <span className="text-green-500 mr-2">
-                  <Check />
-                </span>
-                Menor tempo de resolução
-              </li>
+              {benefit.points.map((point, index) => (
+                <li key={index} className="flex items-center text-gray-700">
+                  <span className="text-green-500 mr-2">
+                    <Check />
+                  </span>
+                  {point}
+                </li>
+              ))}
             </ul>
           </div>
+
           <div className="flex-1 w-full bg-gray-100 rounded-3xl h-64 md:h-96 flex items-center justify-center border-2 border-dashed border-gray-300">
             <p className="text-gray-400">
               [Imagem: Dashboard de Linha do Tempo]
