@@ -1,5 +1,4 @@
-import Header from "../../layouts/Home/header";
-import Footer from "../../layouts/Home/footer";
+import MainLayout from "../../layouts/HomeLayout";
 
 import Hero from "../Home/sections/Hero";
 import Problem from "../Home/sections/Problem";
@@ -7,28 +6,30 @@ import Solution from "../Home/sections/Solution";
 import Benefits from "../Home/sections/Benefits";
 import CTA from "../Home/sections/CTA";
 
-import { ScrollReveal } from "../../components/Reveal";
+import Section from "../../components/Section";
 
 export default function HomePage() {
   return (
-    <>
-      <Header />
-      <ScrollReveal>
+    <MainLayout>
+      <Section>
         <Hero />
-      </ScrollReveal>
-      <ScrollReveal>
+      </Section>
+
+      <Section>
         <Problem />
-      </ScrollReveal>
-      <ScrollReveal>
+      </Section>
+
+      <Section>
         <Solution />
-      </ScrollReveal>
-      <ScrollReveal>
+      </Section>
+
+      <Section>
         <Benefits />
-      </ScrollReveal>
-      <ScrollReveal>
+      </Section>
+
+      <Section>
         <CTA />
-      </ScrollReveal>
-      <Footer />
-    </>
+      </Section>
+    </MainLayout>
   );
 }

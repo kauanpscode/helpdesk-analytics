@@ -23,11 +23,11 @@ export default function CTA() {
             onClick={handleClick}
             className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-4 rounded-full font-bold text-xl shadow-xl transition-all hover:scale-105 active:scale-95"
           >
-            Criar Minha Conta
+            Começar a usar
           </button>
 
           <p className="text-sm text-blue-200">
-            Teste grátis por 14 dias • Não requer cartão de crédito
+            {/* Teste grátis por 14 dias • Não requer cartão de crédito */}
           </p>
         </div>
       </div>
