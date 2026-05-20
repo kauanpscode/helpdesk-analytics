@@ -21,7 +21,7 @@ export default function Hero() {
             to="/register"
             className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all hover:scale-105 active:scale-95"
           >
-            Começar grátis
+            Começar a utilizar
           </Link>
 
           <Link

@@ -64,7 +64,17 @@ export default function AuthForm({ type }: Props) {
     <div className="flex-1 flex items-center justify-center bg-[#F6F9FC] p-6">
       <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-6">
         <h2 className="text-2xl font-semibold mb-6 text-start text-gray-800">
-          {isLogin ? "Acesse sua conta" : "Criar conta"}
+          {isLogin ? (
+            <>
+              Entre no <span className="text-[#216bde]">Help</span>
+              <span className="text-[#15a059]">Flow</span>
+            </>
+          ) : (
+            <>
+              Crie uma conta no <span className="text-[#216bde]">Help</span>
+              <span className="text-[#15a059]">Flow</span>
+            </>
+          )}
         </h2>
 
         {error && (
