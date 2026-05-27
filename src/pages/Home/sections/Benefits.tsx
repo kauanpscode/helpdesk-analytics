@@ -18,37 +18,37 @@ const benefit: BenefitItem = {
 
 export default function Benefits() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-[var(--bg)] overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--text)] mb-4">
             A experiência que seu cliente{" "}
-            <span className="text-blue-600">merece.</span>
+            <span className="text-blue-600 dark:text-blue-400">merece.</span>
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-[var(--text-muted)] text-lg">
             O que acontece quando sua equipe tem as ferramentas certas.
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
           <div className="flex-1">
-            <div className="inline-block p-3 bg-blue-100 text-blue-600 rounded-2xl mb-6">
+            <div className="inline-block p-3 bg-blue-100 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 rounded-2xl mb-6">
               <div className="text-2xl">
                 <LinkIcon />
               </div>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-4">
               {benefit.title}
             </h3>
 
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
               {benefit.description}
             </p>
 
             <ul className="mt-6 space-y-3">
               {benefit.points.map((point, index) => (
-                <li key={index} className="flex items-center text-gray-700">
+                <li key={index} className="flex items-center text-[var(--text-secondary)]">
                   <span className="text-green-500 mr-2">
                     <Check />
                   </span>
@@ -58,8 +58,8 @@ export default function Benefits() {
             </ul>
           </div>
 
-          <div className="flex-1 w-full bg-gray-100 rounded-3xl h-64 md:h-96 flex items-center justify-center border-2 border-dashed border-gray-300">
-            <p className="text-gray-400">
+          <div className="flex-1 w-full bg-[var(--bg-secondary)] rounded-3xl h-64 md:h-96 flex items-center justify-center border-2 border-dashed border-[var(--border)] transition-colors duration-300">
+            <p className="text-[var(--text-description)]">
               [Imagem: Dashboard de Linha do Tempo]
             </p>
           </div>

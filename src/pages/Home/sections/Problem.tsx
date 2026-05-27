@@ -32,11 +32,11 @@ const problems: ProblemItem[] = [
 
 export default function Problem() {
   return (
-    <section className="bg-gray-50 py-24 px-4">
+    <section className="bg-[var(--bg-secondary)] py-24 px-4 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--text)] mb-12">
           Seu atendimento atual gera{" "}
-          <span className="text-red-600">caos ou lucro?</span>
+          <span className="text-red-600 dark:text-red-400">caos ou lucro?</span>
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -46,17 +46,17 @@ export default function Problem() {
             return (
               <div
                 key={p.title}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1"
+                className="bg-[var(--bg-card)] p-8 rounded-2xl shadow-sm border border-[var(--border)] hover:shadow-md dark:hover:shadow-zinc-950/50 transition-all hover:-translate-y-1"
               >
                 <div className="flex justify-center mb-4">
                   <Icon size={32} className="text-red-500" />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+                <h3 className="text-xl font-bold text-[var(--text)] mb-2 text-center">
                   {p.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed text-center">
+                <p className="text-[var(--text-muted)] leading-relaxed text-center">
                   {p.desc}
                 </p>
               </div>

@@ -21,28 +21,28 @@ export default function EmpresaPage() {
       icon: Target,
       title: "Missão",
       description: "Simplificar o atendimento ao cliente com foco em dados acionáveis e eficiência.",
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
+      color: "text-blue-600 dark:text-blue-400",
+      bgColor: "bg-blue-50 dark:bg-blue-950/30",
     },
     {
       icon: Sparkles,
       title: "Visão",
       description: "Ser a referência em painéis analíticos para operações de suporte moderno.",
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
+      color: "text-emerald-600 dark:text-emerald-400",
+      bgColor: "bg-emerald-50 dark:bg-emerald-950/30",
     },
     {
       icon: Shield,
       title: "Valores",
       description: "Transparência, facilidade de uso, performance e segurança de ponta.",
-      color: "text-amber-600",
-      bgColor: "bg-amber-50",
+      color: "text-amber-600 dark:text-amber-400",
+      bgColor: "bg-amber-50 dark:bg-amber-950/30",
     },
   ];
 
   return (
     <MainLayout>
-      <div className="bg-slate-50 py-16 sm:py-20 min-h-[80vh] flex items-center">
+      <div className="bg-[var(--bg-secondary)] py-16 sm:py-20 min-h-[80vh] flex items-center transition-colors duration-300">
         <motion.div
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
           variants={containerVariants}
@@ -53,13 +53,13 @@ export default function EmpresaPage() {
           <div className="text-center mb-16">
             <motion.h1
               variants={itemVariants}
-              className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight"
+              className="text-3xl md:text-5xl font-extrabold text-[var(--text)] tracking-tight"
             >
-              Sobre a <span className="text-blue-600">Empresa</span>
+              Sobre a <span className="text-blue-600 dark:text-blue-400">Empresa</span>
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto"
+              className="mt-4 text-base md:text-lg text-[var(--text-muted)] max-w-2xl mx-auto"
             >
               O HelpFlow é um projeto de portfólio conceitual que demonstra como organizar e analisar chamados de suporte em tempo real para otimizar equipes de atendimento.
             </motion.p>
@@ -75,13 +75,13 @@ export default function EmpresaPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md"
+                  className="bg-[var(--bg-card)] p-6 rounded-2xl border border-[var(--border)] shadow-sm transition-all hover:shadow-md transition-colors duration-300"
                 >
                   <div className={`inline-flex p-3 rounded-xl ${item.bgColor} ${item.color} mb-4`}>
                     <Icon size={20} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-lg font-bold text-[var(--text)] mb-2">{item.title}</h3>
+                  <p className="text-[var(--text-muted)] text-sm leading-relaxed">{item.description}</p>
                 </div>
               );
             })}
@@ -90,11 +90,11 @@ export default function EmpresaPage() {
           {/* Developer Highlight */}
           <motion.div
             variants={itemVariants}
-            className="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm text-center max-w-md mx-auto"
+            className="bg-[var(--bg-card)] border border-[var(--border)] p-8 rounded-2xl shadow-sm text-center max-w-md mx-auto transition-colors duration-300"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-1">Kauan P. S.</h3>
-            <p className="text-xs text-blue-600 font-semibold mb-4">Desenvolvedor Full-Stack</p>
-            <p className="text-sm text-gray-500 mb-6">
+            <h3 className="text-lg font-bold text-[var(--text)] mb-1">Kauan P. S.</h3>
+            <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold mb-4">Desenvolvedor Full-Stack</p>
+            <p className="text-sm text-[var(--text-description)] mb-6">
               Projeto conceitual construído para demonstrar habilidades em React, APIs no back-end e design moderno de interfaces.
             </p>
             <div className="flex gap-3 justify-center">
@@ -102,7 +102,7 @@ export default function EmpresaPage() {
                 href="https://github.com/kauanpscode"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-4 py-2 rounded-xl text-xs font-semibold hover:bg-gray-800 transition-colors flex items-center gap-1.5"
+                className="bg-[var(--text)] text-[var(--bg)] px-4 py-2 rounded-xl text-xs font-semibold hover:opacity-90 transition-colors flex items-center gap-1.5"
               >
                 <Users size={12} />
                 GitHub

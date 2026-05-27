@@ -22,30 +22,30 @@ export default function IdealizacaoPage() {
       icon: Cpu,
       tech: "React + Vite + Tailwind",
       desc: "Interface reativa, limpa e modular. Focada em performance e usabilidade imediata para o operador.",
-      color: "text-blue-500",
-      bgColor: "bg-blue-50",
+      color: "text-blue-500 dark:text-blue-400",
+      bgColor: "bg-blue-50 dark:bg-blue-950/30",
     },
     {
       title: "Back-end",
       icon: Terminal,
       tech: "PHP + CodeIgniter 4",
       desc: "RESTful API leve e estruturada. Controla autenticação segura, chamados e geração de estatísticas.",
-      color: "text-purple-500",
-      bgColor: "bg-purple-50",
+      color: "text-purple-500 dark:text-purple-400",
+      bgColor: "bg-purple-50 dark:bg-purple-950/30",
     },
     {
       title: "Banco de Dados",
       icon: Database,
       tech: "PostgreSQL",
       desc: "Armazenamento relacional robusto que garante integridade dos dados e relatórios confiáveis.",
-      color: "text-emerald-500",
-      bgColor: "bg-emerald-50",
+      color: "text-emerald-500 dark:text-emerald-400",
+      bgColor: "bg-emerald-50 dark:bg-emerald-950/30",
     },
   ];
 
   return (
     <MainLayout>
-      <div className="bg-slate-50 py-16 sm:py-20 min-h-[80vh] flex items-center">
+      <div className="bg-[var(--bg-secondary)] py-16 sm:py-20 min-h-[80vh] flex items-center transition-colors duration-300">
         <motion.div
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
           variants={containerVariants}
@@ -56,13 +56,13 @@ export default function IdealizacaoPage() {
           <div className="text-center mb-16">
             <motion.h1 
               variants={itemVariants}
-              className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight"
+              className="text-3xl md:text-5xl font-extrabold text-[var(--text)] tracking-tight"
             >
-              Conceito e <span className="text-indigo-600">Arquitetura</span>
+              Conceito e <span className="text-indigo-600 dark:text-indigo-400">Arquitetura</span>
             </motion.h1>
             <motion.p 
               variants={itemVariants}
-              className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto"
+              className="mt-4 text-base md:text-lg text-[var(--text-muted)] max-w-2xl mx-auto"
             >
               Como o HelpFlow foi idealizado para ser uma solução leve, eficiente e moderna de helpdesk analítico.
             </motion.p>
@@ -78,16 +78,16 @@ export default function IdealizacaoPage() {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center transition-all hover:shadow-md"
+                  className="bg-[var(--bg-card)] p-6 rounded-2xl border border-[var(--border)] shadow-sm flex flex-col items-center text-center transition-all hover:shadow-md transition-colors duration-300"
                 >
                   <div className={`p-3 rounded-xl ${stack.bgColor} ${stack.color} mb-4`}>
                     <Icon size={24} />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1">{stack.title}</h3>
-                  <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full mb-3">
+                  <h3 className="font-bold text-[var(--text)] text-lg mb-1">{stack.title}</h3>
+                  <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 px-2.5 py-0.5 rounded-full mb-3">
                     {stack.tech}
                   </span>
-                  <p className="text-sm text-gray-500 leading-relaxed">{stack.desc}</p>
+                  <p className="text-sm text-[var(--text-description)] leading-relaxed">{stack.desc}</p>
                 </div>
               );
             })}

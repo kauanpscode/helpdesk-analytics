@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="bg-white py-24 px-4 text-center">
+    <section className="bg-[var(--bg)] py-24 px-4 text-center transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--text)] leading-tight tracking-tight">
           Atendimento profissional <br className="hidden md:block" />
-          <span className="text-blue-600">
+          <span className="text-blue-600 dark:text-blue-400">
             sem o estresse de sempre.
           </span>
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
           Uma plataforma intuitiva para gerenciar demandas, sem perder nenhuma mensagem pelo caminho.
         </p>
 

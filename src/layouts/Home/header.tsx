@@ -1,9 +1,16 @@
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import Dropdown from "../../components/Dropdown";
+import { useTheme } from "../../context/ThemeProvider";
 
 export default function Header() {
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
+
   const menus = [
     { label: "Empresa", to: "/empresa" },
     { label: "Idealização", to: "/idealizacao" },
@@ -11,9 +18,10 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md mb-1 relative">
+    <header className="bg-[var(--bg-card)] border-b border-[var(--border)] shadow-sm mb-1 relative transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 relative">
-        <div className="flex md:hidden items-center">
+        {/* Mobile Menu */}
+        <div className="flex md:hidden items-center text-[var(--text)]">
           <Dropdown
             icon={<Menu size={26} />}
             showChevron={false}
@@ -21,26 +29,22 @@ export default function Header() {
           />
         </div>
 
+        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8">
           {menus.map((menu) => (
             <Link
               to={menu.to}
               key={menu.to}
-              className="font-semibold text-gray-700 hover:text-[#216bde] transition-colors"
+              className="font-semibold text-[var(--text-secondary)] hover:text-[#216bde] transition-colors"
             >
               {menu.label}
             </Link>
           ))}
         </nav>
 
+        {/* Logo */}
         <div className="absolute left-1/2 -translate-x-1/2">
           <Link to="/" className="flex items-center gap-2">
-            {/* <img
-              src={helpFlowLogo}
-              alt="HelpFlow Logo"
-              className="w-10 h-10 object-contain"
-            /> */}
-
             <span className="text-[20px] font-extrabold tracking-tight leading-none">
               <span className="text-[#216bde]">Help</span>
               <span className="text-[#15a059]">Flow</span>
@@ -48,7 +52,17 @@ export default function Header() {
           </Link>
         </div>
 
-        <div>
+        {/* Actions */}
+        <div className="flex items-center gap-4">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text)] hover:bg-[var(--bg-muted)] transition-colors duration-300"
+          >
+            {resolvedTheme === "dark" ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+
+          {/* Login */}
           <Link
             to="/login"
             className="bg-[#216bde] text-white px-5 py-2 rounded-full font-medium hover:opacity-90 transition-all"

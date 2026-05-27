@@ -7,7 +7,7 @@ interface Props {
 
 export default function MainLayout({ children }: Props) {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-300">
       <Header />
       {children}
       <Footer />

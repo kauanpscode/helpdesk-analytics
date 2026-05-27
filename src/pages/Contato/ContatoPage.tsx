@@ -31,18 +31,18 @@ export default function ContatoPage() {
 
   return (
     <MainLayout>
-      <div className="bg-slate-50 py-16 sm:py-20 min-h-[80vh] flex items-center">
+      <div className="bg-[var(--bg-secondary)] py-16 sm:py-20 min-h-[80vh] flex items-center transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Header */}
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-3">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-400 mb-3">
               <MessageSquare size={12} />
               Contato
             </span>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-[var(--text)] tracking-tight">
               Fale Conosco
             </h1>
-            <p className="mt-3 text-sm md:text-base text-gray-600 max-w-lg mx-auto">
+            <p className="mt-3 text-sm md:text-base text-[var(--text-muted)] max-w-lg mx-auto">
               Seja para tirar dúvidas sobre o projeto ou bater um papo profissional, envie sua mensagem.
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function ContatoPage() {
             </div>
 
             {/* Form */}
-            <div className="md:col-span-7 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col justify-center">
+            <div className="md:col-span-7 bg-[var(--bg-card)] rounded-2xl p-6 border border-[var(--border)] shadow-sm flex flex-col justify-center transition-colors duration-300">
               <AnimatePresence mode="wait">
                 {!isSubmitted ? (
                   <motion.form
@@ -113,7 +113,7 @@ export default function ContatoPage() {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1">
-                        <label htmlFor="nome" className="text-xs font-semibold text-gray-700">
+                        <label htmlFor="nome" className="text-xs font-semibold text-[var(--text-secondary)]">
                           Nome
                         </label>
                         <input
@@ -124,12 +124,12 @@ export default function ContatoPage() {
                           onChange={handleInputChange}
                           required
 
-                          className="w-full px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs"
+                          className="w-full px-3 py-2 rounded-xl border border-[var(--border)] bg-[var(--bg-input)] text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs"
                         />
                       </div>
 
                       <div className="space-y-1">
-                        <label htmlFor="email" className="text-xs font-semibold text-gray-700">
+                        <label htmlFor="email" className="text-xs font-semibold text-[var(--text-secondary)]">
                           E-mail
                         </label>
                         <input
@@ -140,13 +140,13 @@ export default function ContatoPage() {
                           onChange={handleInputChange}
                           required
 
-                          className="w-full px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs"
+                          className="w-full px-3 py-2 rounded-xl border border-[var(--border)] bg-[var(--bg-input)] text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-1">
-                      <label htmlFor="mensagem" className="text-xs font-semibold text-gray-700">
+                      <label htmlFor="mensagem" className="text-xs font-semibold text-[var(--text-secondary)]">
                         Mensagem
                       </label>
                       <textarea
@@ -157,7 +157,7 @@ export default function ContatoPage() {
                         required
                         rows={4}
 
-                        className="w-full px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs resize-none"
+                        className="w-full px-3 py-2 rounded-xl border border-[var(--border)] bg-[var(--bg-input)] text-[var(--text)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-xs resize-none"
                       />
                     </div>
 
@@ -190,8 +190,8 @@ export default function ContatoPage() {
                       <CheckCircle2 size={32} />
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-lg font-bold text-gray-900">Mensagem Enviada!</h3>
-                      <p className="text-xs text-gray-500 max-w-xs mx-auto">
+                      <h3 className="text-lg font-bold text-[var(--text)]">Mensagem Enviada!</h3>
+                      <p className="text-xs text-[var(--text-description)] max-w-xs mx-auto">
                         Simulação de envio realizada com sucesso. Obrigado!
                       </p>
                     </div>
