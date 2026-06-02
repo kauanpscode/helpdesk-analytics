@@ -1,7 +1,7 @@
 import { Menu, Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import Dropdown from "../../components/Dropdown";
+import Dropdown from "../../components/Sidebar";
 import { useTheme } from "../../context/ThemeProvider";
 
 export default function Header() {
@@ -12,9 +12,9 @@ export default function Header() {
   };
 
   const menus = [
-    { label: "Empresa", to: "/empresa" },
-    { label: "Idealização", to: "/idealizacao" },
-    { label: "Contato", to: "/contato" },
+    { label: "Empresa", to: "/company" },
+    { label: "Idealização", to: "/ideation" },
+    { label: "Contato", to: "/contact" },
   ];
 
   return (
@@ -24,7 +24,6 @@ export default function Header() {
         <div className="flex items-center text-[var(--text)]">
           <Dropdown
             icon={<Menu size={26} />}
-            showChevron={false}
             items={menus}
           />
         </div>

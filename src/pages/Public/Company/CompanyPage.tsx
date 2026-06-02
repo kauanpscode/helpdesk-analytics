@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Shield, Sparkles, Target, Users } from "lucide-react";
-import MainLayout from "../../layouts/HomeLayout";
+import MainLayout from "../../../layouts/HomeLayout";
 
-export default function EmpresaPage() {
+export default function CompanyPage() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -108,7 +108,7 @@ export default function EmpresaPage() {
                 GitHub
               </a>
               <a
-                href="/contato"
+                href="/contact"
                 className="bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-semibold hover:bg-blue-700 transition-colors"
               >
                 Contato

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Terminal, Database, Cpu } from "lucide-react";
-import MainLayout from "../../layouts/HomeLayout";
+import MainLayout from "../../../layouts/HomeLayout";
 
-export default function IdealizacaoPage() {
+export default function IdeationPage() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

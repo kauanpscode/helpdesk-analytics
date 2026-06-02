@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MapPin, Send, CheckCircle2, MessageSquare } from "lucide-react";
-import MainLayout from "../../layouts/HomeLayout";
+import MainLayout from "../../../layouts/HomeLayout";
 
-export default function ContatoPage() {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",

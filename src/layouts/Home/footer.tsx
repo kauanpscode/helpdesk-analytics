@@ -22,7 +22,7 @@ const sections: FooterSection[] = [
     title: "Suporte",
     links: [
       { label: "Central de Ajuda", to: "/ajuda" },
-      { label: "Contato", to: "/contato" },
+      { label: "Contato", to: "/contact" },
     ],
   },
 ];

@@ -9,9 +9,17 @@ interface SidebarItem {
 
 interface SidebarProps {
   items: SidebarItem[];
+  icon?: React.ReactNode;
+  side?: "left" | "right";
+  width?: string;
 }
 
-export default function Sidebar({ items }: SidebarProps) {
+export default function Sidebar({
+  items,
+  icon,
+  side = "left",
+  width = "w-72",
+}: SidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,9 +27,9 @@ export default function Sidebar({ items }: SidebarProps) {
       {/* Botão */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative z-50 text-black dark:text-white"
+        className="relative z-50 text-black dark:text-white cursor-pointer"
       >
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
+        {icon ?? (isOpen ? <X size={28} /> : <Menu size={28} />)}
       </button>
 
       {/* Overlay */}
@@ -34,8 +42,8 @@ export default function Sidebar({ items }: SidebarProps) {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full w-72 bg-white dark:bg-gray-900 shadow-xl z-50 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 ${side === "left" ? 'left-0' : 'right-0'} h-full ${width} bg-white dark:bg-gray-900 shadow-xl z-50 transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : side === "left" ? "-translate-x-full" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center p-4">
@@ -44,7 +52,7 @@ export default function Sidebar({ items }: SidebarProps) {
             <span className="text-black dark:text-white">rius</span>
           </span>
 
-          <button onClick={() => setIsOpen(false)}>
+          <button onClick={() => setIsOpen(false)} className="relative z-50 text-black dark:text-white">
             <X size={24} />
           </button>
         </div>

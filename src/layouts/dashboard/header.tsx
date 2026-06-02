@@ -1,7 +1,8 @@
 import { Menu, Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import Dropdown from "../../components/Dropdown";
+import Sidebar from "../../components/Sidebar";
+import UserDropdown from "../../components/UserDropdown";
 import { useTheme } from "../../context/ThemeProvider";
 
 export default function Header() {
@@ -11,10 +12,11 @@ export default function Header() {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
-  const menus = [
-    { label: "Empresa", to: "/empresa" },
-    { label: "Idealização", to: "/idealizacao" },
-    { label: "Contato", to: "/contato" },
+  const menus = [{ label: "Home", to: "/dashboard" }];
+
+  const userMenu = [
+    { label: "Meu Perfil", to: "/profile" },
+    { label: "Sair", to: "/logout" },
   ];
 
   return (
@@ -22,9 +24,8 @@ export default function Header() {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 relative">
         {/* Mobile Menu */}
         <div className="flex items-center">
-          <Dropdown
+          <Sidebar
             icon={<Menu size={26} />}
-            showChevron={false}
             items={menus}
           />
         </div>
@@ -51,13 +52,7 @@ export default function Header() {
             {resolvedTheme === "dark" ? <Moon size={20} /> : <Sun size={20} />}
           </button>
 
-          {/* Login */}
-          <Link
-            to="/login"
-            className="bg-[#216bde] text-white px-5 py-2 rounded-full font-medium hover:opacity-90 transition-all"
-          >
-            Entrar
-          </Link>
+          <UserDropdown items={userMenu} />
         </div>
       </div>
     </header>

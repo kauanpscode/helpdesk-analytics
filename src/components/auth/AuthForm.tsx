@@ -77,7 +77,7 @@ export default function AuthForm({ type }: Props) {
           {isLogin ? (
             <>
               Entre no{" "}
-              <span className="text-purple-600 dark:text-purple-400"> ~</span>
+              <span className="text-purple-600 dark:text-purple-400">Mercu</span>
               <span className="text-black dark:text-white">rius</span>
             </>
           ) : (
