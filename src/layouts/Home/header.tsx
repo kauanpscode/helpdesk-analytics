@@ -46,8 +46,8 @@ export default function Header() {
         <div className="absolute left-1/2 -translate-x-1/2">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-[20px] font-extrabold tracking-tight leading-none">
-              <span className="text-[#216bde]">Help</span>
-              <span className="text-[#15a059]">Flow</span>
+              <span className="text-purple-600 dark:text-purple-400">Mercu</span>
+              <span className="text-black dark:text-white">rius</span>
             </span>
           </Link>
         </div>

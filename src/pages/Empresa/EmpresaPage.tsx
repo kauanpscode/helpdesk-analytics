@@ -61,7 +61,7 @@ export default function EmpresaPage() {
               variants={itemVariants}
               className="mt-4 text-base md:text-lg text-[var(--text-muted)] max-w-2xl mx-auto"
             >
-              O HelpFlow é um projeto de portfólio conceitual que demonstra como organizar e analisar chamados de suporte em tempo real para otimizar equipes de atendimento.
+              O Mercurius é um projeto de portfólio conceitual que demonstra como organizar e analisar chamados de suporte em tempo real para otimizar equipes de atendimento.
             </motion.p>
           </div>
 

@@ -17,8 +17,8 @@ export default function Header() {
           to="/"
           className="text-[20px] font-extrabold tracking-tight leading-none"
         >
-          <span className="text-[#216bde]">Help</span>
-          <span className="text-[#15a059]">Flow</span>
+          <span className="text-purple-600 dark:text-purple-400">Mercu</span>
+          <span className="text-black dark:text-white">rius</span>
         </Link>
 
         <button

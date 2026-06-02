@@ -54,22 +54,22 @@ export default function IdealizacaoPage() {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="text-3xl md:text-5xl font-extrabold text-[var(--text)] tracking-tight"
             >
               Conceito e <span className="text-indigo-600 dark:text-indigo-400">Arquitetura</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="mt-4 text-base md:text-lg text-[var(--text-muted)] max-w-2xl mx-auto"
             >
-              Como o HelpFlow foi idealizado para ser uma solução leve, eficiente e moderna de helpdesk analítico.
+              Como o Mercurius foi idealizado para ser uma solução leve, eficiente e moderna de helpdesk analítico.
             </motion.p>
           </div>
 
           {/* Tech Stack Grid */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
           >
@@ -94,7 +94,7 @@ export default function IdealizacaoPage() {
           </motion.div>
 
           {/* Simplified Architecture Summary */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="bg-gradient-to-r from-indigo-900 to-blue-900 rounded-2xl p-8 text-center text-white"
           >

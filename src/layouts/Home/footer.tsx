@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Branding */}
         <div className="col-span-1 md:col-span-2 flex flex-col items-center">
-          <h2 className="text-white text-2xl font-bold mb-4">HelpFlow</h2>
+          <h2 className="text-white text-2xl font-bold mb-4">Mercurius</h2>
           <p className="max-w-xs">
             Transformando o caos do atendimento em produtividade e satisfação.
           </p>
@@ -63,7 +63,7 @@ export default function Footer() {
 
       {/* Footer bottom */}
       <div className="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>© 2026 HelpFlow. Todos os direitos reservados.</p>
+        <p>© 2026 Mercurius. Todos os direitos reservados.</p>
 
         <div className="flex gap-4">
           <Link to="/termos" className="hover:text-blue-400">

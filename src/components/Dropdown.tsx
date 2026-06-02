@@ -36,11 +36,10 @@ export default function Dropdown({
               size={26}
               className={`
         absolute transition-all duration-300
-        ${
-          isOpen
-            ? "opacity-0 rotate-90 scale-75"
-            : "opacity-100 rotate-0 scale-100"
-        }
+        ${isOpen
+                  ? "opacity-0 rotate-90 scale-75"
+                  : "opacity-100 rotate-0 scale-100"
+                }
       `}
             />
 
@@ -48,11 +47,10 @@ export default function Dropdown({
               size={26}
               className={`
         absolute transition-all duration-300
-        ${
-          isOpen
-            ? "opacity-100 rotate-0 scale-100"
-            : "opacity-0 -rotate-90 scale-75"
-        }
+        ${isOpen
+                  ? "opacity-100 rotate-0 scale-100"
+                  : "opacity-0 -rotate-90 scale-75"
+                }
       `}
             />
           </div>
