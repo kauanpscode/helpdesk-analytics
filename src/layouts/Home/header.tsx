@@ -21,26 +21,13 @@ export default function Header() {
     <header className="bg-[var(--bg-card)] border-b border-[var(--border)] shadow-sm mb-1 relative transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 relative">
         {/* Mobile Menu */}
-        <div className="flex md:hidden items-center text-[var(--text)]">
+        <div className="flex items-center text-[var(--text)]">
           <Dropdown
             icon={<Menu size={26} />}
             showChevron={false}
             items={menus}
           />
         </div>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
-          {menus.map((menu) => (
-            <Link
-              to={menu.to}
-              key={menu.to}
-              className="font-semibold text-[var(--text-secondary)] hover:text-[#216bde] transition-colors"
-            >
-              {menu.label}
-            </Link>
-          ))}
-        </nav>
 
         {/* Logo */}
         <div className="absolute left-1/2 -translate-x-1/2">
